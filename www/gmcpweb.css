@@ -1,8 +1,8 @@
 #header{
-	font-family:"Bebas";
+	font-family:bebas;
 	font-weight: 50;
 	color: red;
-	font-size:70px;
+	font-size:83px;
 
 }
 /*
@@ -15,6 +15,10 @@ html {
 
 }
 */
+@font-face {
+    font-family: bebas;
+    src: url(BebasNeue-webfont.woff);
+}
 
 @font-face {
   font-family: "OpenSans-Light";
@@ -120,10 +124,10 @@ html {
 
 
 #uploadtext{
-	font-family:"Bebas";
+	font-family:bebas;
 	font-weight: 50;
 	color: white;
-	font-size:20px;
+	font-size:26px;
 	margin-top:11px;
 }
 
