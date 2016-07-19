@@ -1,0 +1,296 @@
+#header{
+	font-family:"Bebas";
+	font-weight: 50;
+	color: red;
+	font-size:70px;
+
+}
+/*
+html {
+	background-image: url('back3.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    background-size: 2000px;
+
+}
+*/
+
+@font-face {
+  font-family: "OpenSans-Light";
+  src: url("OpenSans-Light.eot"),
+      url("OpenSans-Light.svg"),
+      url("OpenSans-Light.ttf"),
+      url("OpenSans-Light.woff");
+}
+#instruct{
+	font-family:"OpenSans-Light","OpenSans-Regular";
+	color:white;
+	font-size:20px;
+	width:50%;
+	line-height: 30px;
+	text-shadow: 1px 1px black;
+
+}
+
+#upload{
+	height:50px;
+	width:300px;
+	background-color:#2D9CFC;
+	border-radius: 25px;
+	margin-top:15px;
+	border: 1px solid #2D9CFC;
+}
+
+#about{
+	color:#00FFB7;
+}
+
+#contact{
+	color:#FFBC47;
+}
+
+#u1{
+	width:90px;
+	border: 1px solid #00FFB7;
+	border-radius: 25px;
+	left:70%;
+	height:28px;
+	position:fixed;
+	margin-top:-50px;
+}
+
+.choose{
+	width:250px;
+	border: 1px solid black;
+	background-color:white;
+	border-radius: 25px;
+	height:35px;
+	margin-top:15px;
+}
+
+.choose:hover{
+	background-color: #F72100;
+    border: 1px solid black;
+}
+
+#choosetext{
+	color:black;
+	font-family: "OpenSans-Light";
+	font-size: 13px;
+	margin-top:8px;
+}
+
+.choose:hover #choosetext{
+	color:white;
+}
+
+
+
+#u1:hover { 
+    background-color: #00FFB7;;
+    border: 1px solid #00FFB7;;
+}
+
+#u1:hover #about {
+    color:white;
+}
+
+#u2{
+	width:110px;
+	border: 1px solid #FFBC47;
+
+	border-radius: 25px;
+	left:78%;
+	height:28px;
+	position:fixed;
+	margin-top:-50px;
+}
+
+#u2:hover { 
+    background-color: #FFBC47;;
+    border: 1px solid #FFBC47;;
+}
+
+#u2:hover #contact {
+    color:white;
+}
+
+
+
+
+#uploadtext{
+	font-family:"Bebas";
+	font-weight: 50;
+	color: white;
+	font-size:20px;
+	margin-top:11px;
+}
+
+#upload:hover { 
+    background-color: #16D90F;
+    border: 1px solid #16D90F;
+}
+
+#upload:hover #uploadtext {
+    color:white;
+}
+
+#txt_name{
+	width:250px;
+	height:30px;
+	border-radius: 10px;
+	margin-top: 15px;
+	border: 1px solid #B0B0B0;  
+	font-family:"HelveticaNeue-Light","OpenSans-Regular","OpenSans-Light";
+	color:black;
+	font-size:16px;
+	padding-left:15px;
+	padding-right:15px;
+	display: block;
+}
+
+#txt_name:focus, input:focus{
+    outline: 0;
+}
+
+#ajaxP{
+	font-family:"HelveticaNeue-Light","OpenSans-Regular","OpenSans-Light";
+	color:black;
+	font-size:15px;
+	width:30%;
+}
+
+#framebeg{
+	margin-top:30px;
+	display:inline-block;
+	font-family:"OpenSans-Regular","OpenSans-Light";
+	color:black;
+	font-size:15px;
+	line-height: 30px;
+}
+
+.centered-and-cropped { object-fit: cover }
+
+#frameinput{
+	display: inline-block;
+	width:35px;
+	height:30px;
+	border-radius: 10px;
+	margin-top: 15px;
+	border: 1px solid #B0B0B0;  
+	font-family:"HelveticaNeue-Light","OpenSans-Regular","OpenSans-Light";
+	color:black;
+	font-size:16px;
+	padding-left:5px;
+	padding-right:5px;
+	margin-left: 5px;
+}
+
+#frameinput1{
+	display: inline-block;
+	width:35px;
+	height:30px;
+	border-radius: 10px;
+	margin-top: 15px;
+	border: 1px solid #B0B0B0;  
+	font-family:"HelveticaNeue-Light","OpenSans-Regular","OpenSans-Light";
+	color:black;
+	font-size:16px;
+	padding-left:5px;
+	padding-right:5px;
+	margin-left: 5px;
+}
+#empty{
+	display: block;
+	margin-top: -20px;
+}
+#step{
+	margin-top: -20px;
+	display:inline-block;
+	font-family:"OpenSans-Regular","OpenSans-Light";
+	color:black;
+	font-size:15px;
+	line-height: 30px;
+}
+
+#stepinput{
+	display: inline-block;
+	width:25px;
+	height:30px;
+	margin-left: 5px;
+	border-radius: 10px;
+	margin-top: 15px;
+	border: 1px solid #B0B0B0;  
+	font-family:"HelveticaNeue-Light","OpenSans-Regular","OpenSans-Light";
+	color:black;
+	font-size:16px;
+	padding-left:5px;
+	padding-right:5px;
+}
+
+#cost{
+	font-family:"OpenSans-Regular","OpenSans-Light";
+	color:black;
+	font-size:18px;
+	line-height: 30px;
+	display: block;
+}
+
+#motion{
+	padding-right:5px;
+	display:inline-block;
+	font-family:"OpenSans-Regular","OpenSans-Light";
+	color:black;
+	font-size:16px;
+	line-height: 30px;
+}
+
+#my-input{
+	display:inline-block;
+}
+
+#appearance{
+	display:inline-block;
+	font-family:"OpenSans-Regular","OpenSans-Light";
+	color:black;
+	font-size:10px;
+	line-height: 30px;
+}
+
+#email{
+	display:inline-block;
+	font-family:"OpenSans-Regular","OpenSans-Light";
+	color:white;
+	font-size:16px;
+	line-height: 30px;
+	text-shadow: 1px 1px black;
+}
+
+#emailinput{
+	display: inline-block;
+	width:175px;
+	height:30px;
+	margin-left: 5px;
+	border-radius: 10px;
+	margin-top: 15px;
+	border: 1px solid #B0B0B0;  
+	font-family:"HelveticaNeue-Light","OpenSans-Regular","OpenSans-Light";
+	color:black;
+	font-size:16px;
+	padding-left:5px;
+	padding-right:5px;
+}
+
+#tab{
+	width:150px;
+	height:26px;
+	border-radius: 5px;
+	background-color:white;
+	display:inline-block;
+	opacity:0.7;
+	margin-top:5px;
+}
+#tab:hover{
+	opacity:1;
+}
