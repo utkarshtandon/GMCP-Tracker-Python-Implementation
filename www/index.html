@@ -84,7 +84,7 @@ Date: 06/10/2015
 				var email = $('#emailinput').val();
 				var start = $('#frameinput1').val();
 				swal("Congrats GMCP is now analyzing your video!", "Results will be sent to: "+email, "success")
-				$.post("http://127.0.0.1:8080/home",{url:bla,begframe:beg,framestep:step,cost:ratio,emailinput:email,startframe:start}, function(dataFromServer) {
+				$.post("http://10.79.12.208:8080/home",{url:bla,begframe:beg,framestep:step,cost:ratio,emailinput:email,startframe:start}, function(dataFromServer) {
 				//dataFromServer.addHeader("Access-Control-Allow-Origin", "*");
 					$('#ajaxP').html(dataFromServer);
 					$('#ajaxP').css('width', '30%');
@@ -103,7 +103,7 @@ Date: 06/10/2015
 						email = inputValue
 						var start = 0;
 						alert(email);
-						$.post("http://127.0.0.1:8080/home",{url:bla,begframe:beg,framestep:step,cost:ratio,emailinput:email,startframe:start}, function(dataFromServer) {
+						$.post("http://10.79.12.208:8080/home",{url:bla,begframe:beg,framestep:step,cost:ratio,emailinput:email,startframe:start}, function(dataFromServer) {
 							//dataFromServer.addHeader("Access-Control-Allow-Origin", "*");
 							$('#ajaxP').html(dataFromServer);
 							$('#ajaxP').css('width', '30%');
@@ -119,12 +119,13 @@ Date: 06/10/2015
 					swal("Congrats GMCP is now analyzing PETS 2009!", "Results will be sent to: " + inputValue, "success");
 
 					var bla = "https://www.dropbox.com/s/fqhrsrfkvm6bh11/petsvideolarge.mp4?dl=0";
+
 					//$.post("http://127.0.0.1:8080/home");
 					var beg = 160;
 					var step = 15;
 					var email = inputValue;
 					var start = 100;
-					$.post("http://127.0.0.1:8080/home",{url:bla,begframe:beg,framestep:step,cost:ratio,emailinput:email,startframe:start}, function(dataFromServer) {
+					$.post("http://10.79.12.208:8080/home",{url:bla,begframe:beg,framestep:step,cost:ratio,emailinput:email,startframe:start}, function(dataFromServer) {
 						//dataFromServer.addHeader("Access-Control-Allow-Origin", "*");
 						$('#ajaxP').html(dataFromServer);
 						$('#ajaxP').css('width', '30%');
@@ -143,7 +144,7 @@ Date: 06/10/2015
 					var step = 25;
 					var email = inputValue
 					var start = 0;
-					$.post("http://127.0.0.1:8080/home",{url:bla,begframe:beg,framestep:step,cost:ratio,emailinput:email,startframe:start}, function(dataFromServer) {
+					$.post("http://10.79.12.208:8080/home",{url:bla,begframe:beg,framestep:step,cost:ratio,emailinput:email,startframe:start}, function(dataFromServer) {
 						//dataFromServer.addHeader("Access-Control-Allow-Origin", "*");
 						$('#ajaxP').html(dataFromServer);
 						$('#ajaxP').css('width', '30%');
@@ -152,34 +153,43 @@ Date: 06/10/2015
 
 					});
 			});
-			$( "#utface" ).mouseover(function() {
+			$( "#utface" ).click(function() {
 				swal({   title: "Utkarsh Tandon",   text: "Utkarsh built the entire Python algorithm for the GMCP tracker including the creation of this website. He is a current sophomore in high school and enjoys playing tennis in his free time when he is not busy exploring Artificial Intelligence and Computer Vision.",   imageUrl: "utkarshtandonimgface.jpg" });
 			});
-			$( "#zface" ).mouseover(function() {
+			$( "#zface" ).click(function() {
 				swal({   title: "Dr. Amir Zamir",   text: 'Dr. Zamir is the original author of the paper "GMCP-Tracker: Global Multi-object Tracking Using Generalized Minimum Clique Graphs" which this implementation is based on. He is the advisor of the project and is currently a postdoctoral researcher at Stanford University.',   imageUrl: "drzamirface.jpg" });
 			});
+			
+			$( "#u1" ).click(function() {
+                                link = "http://crcv.ucf.edu/projects/GMCP-Tracker/"
+				window.location.href = link;
+                        });
+			
+			$( "#u2" ).click(function() {                               
+				link = "https://github.com/utkarshtandon/GMCP-Tracker-Python-Implementation"
+                                window.location.href = link; 
+                        });
 		});
 		</script>
 	</head>
-	<body >
-		<img id="backimg" src="tracklets2.jpg" style="position:absolute;margin-top:-100px;width:100%;margin-left:-10px;z-index:-1;clip: rect(0px,3000px,640px,0px);">
-		<div id="u1"><center><p id="about" style="font-family:OpenSans-Light;margin-top:5px;font-size:13px;">ABOUT</p></center></div>
-		<div id="u2"><center><p id="contact" style="font-family:OpenSans-Light;margin-top:5px;font-size:13px;">CONTACT US</p></center></div>
+	<body style="min-width:1400px;" >
+		<img id="backimg" src="tracklets2.jpg" style="min-width:1400px;position:absolute;margin-top:-100px;width:100%;margin-left:-10px;z-index:-1;clip: rect(0px,3000px,640px,0px);">
+		<div id="u1" style="cursor:pointer;"><center><p id="about" style="font-family:OpenSans-Light;margin-top:5px;font-size:13px;">ABOUT</p></center></div>
+		<div id="u2" style="cursor:pointer;"><center><p id="contact" style="font-family:OpenSans-Light;margin-top:5px;font-size:13px;">GITHUB CODE</p></center></div>
 		<center><p id="header" >GMCP Tracker</p></center>
 		<center>
 		
 		<center>
 			<p id="instruct">Enter a link to a video below and watch the GMCP algorithm separately track each human.</p>
 
-			<input type="text" placeholder="Dropbox Link" id="txt_name"/>
-			<p id="email"  style="padding-top:10px;">Email:</p>
-			<input type="text"  id="emailinput" style="margin-top:10px;"/>
+			<input type="text" placeholder="Dropbox Link (Shared)" id="txt_name"/>
+			<input type="text"  placeholder="Your Email" id="emailinput" style="margin-top:20px;"/>
 		</center>
 
 		<center>
 
 		<!--<div style="width:50px;height:5px;background-color:white;display:inline-block;vertical-align:top;margin-top:10px;margin-right:-5px;"></div>-->
-		<div id="tab">
+		<div id="tab" style="margin-top:20px">
 			<p style="font-family:HelveticaNeue-Light;font-size:15px;color:black;padding-top:4px;margin-top:0px;">Advanced Options</p>
 		</div>
 		<!--<div style="width:50px;height:5px;background-color:white;display:inline-block;vertical-align:top;margin-top:10px;margin-left:-5px;"></div>-->
@@ -211,7 +221,7 @@ Date: 06/10/2015
 		</div>
 
 		<center>
-			<div id="upload" style="margin-top:15px;">
+			<div id="upload" style="margin-top:15px;cursor:pointer;">
 				<p id="uploadtext">TRACK</p>
 			</div>
 		    <p id="ajaxP"></p>
@@ -237,7 +247,7 @@ Date: 06/10/2015
 			<p style="font-family:HelveticaNeue-Light;font-size:15px;display:inline-block;width:350px;margin-top:10px;color:#8F0AF5;vertical-align:top;padding-left:18px;padding-right:18px;">Frame Number, Detection Number, Full_Body_x1, Full Body_y1, Full_Body_x2, Full_Body_y2, Head_x1, Head_y1, Head_x2, Head_y2, Body1_x1, Body1_y1, Body1_x2, Body1_y2, Body2_x1, Body2_y1, Body2_x2, Body2_y2, (Continues till Body7_y2) </p>
 			<div style="width:1px;height:110px;display:inline-block;background-color:#ADADAD;margin-right:20px;"></div>	
 
-			<div class="choose"><center><p id="choosetext">UPLOAD CSV</p></center></div>
+			<div class="choose" style="cursor:pointer;"><center><p id="choosetext">UPLOAD CSV</p></center></div>
 			
 		</div>
 
@@ -250,15 +260,15 @@ Date: 06/10/2015
 
 			<embed style="visibility:visible;margin-top:30px;" src="parkinglot.mp4" autoplay="false" preload="false" width="300" height="200" scale="aspect" controller="true">
 
-			<div class="choose" id="pl"><center><p id="choosetext">CHOOSE PARKING LOT</p></center></div>
+			<div class="choose" id="pl" style="cursor:pointer;"><center><p id="choosetext">CHOOSE PARKING LOT</p></center></div>
 
 			<embed style="visibility:visible;margin-top:30px;" src="petsvideolarge.mp4" autoplay="false" preload="false" width="300" height="200" scale="aspect" controller="true">
 
-			<div class="choose" id="pet"><center><p id="choosetext">CHOOSE PETS 2009</p></center></div>
+			<div class="choose" id="pet" style="cursor:pointer;"><center><p id="choosetext">CHOOSE PETS 2009</p></center></div>
 
 			<embed style="visibility:visible;margin-top:30px;" src="tudcrossing.mp4" autoplay="false" preload="false" width="300" height="200" scale="aspect" controller="true">
 
-			<div class="choose" id="tud"><center><p id="choosetext">CHOOSE TUD CROSSING</p></center></div>
+			<div class="choose" id="tud" style="cursor:pointer;"><center><p id="choosetext">CHOOSE TUD CROSSING</p></center></div>
 		</div>
 
 		<div style="border: 1px solid #B0B0B0;border-radius: 10px;padding-bottom:35px;width:500px;display:inline-block;vertical-align:top;margin-right:525px;margin-top:-585px;height:240px;background-color:white;">
@@ -266,16 +276,16 @@ Date: 06/10/2015
 			<p style="font-family:OpenSans-Light;font-size:18px;display:inline-block;margin-top:30px;">About the GMCP algorithm</p>
 			<div style="background-color:#ADADAD; width:200px; height:1px;"></div>
 
-			<p style="font-family:OpenSans-Light;font-size:16px;width:90%;display:inline-block;margin-top:20px;">This human tracking algorithm is a Python implementation of the paper "GMCP-Tracker: Global Multi-object Tracking Using Generalized Minimum Clique Graphs". The algorithm attempts to solve the optomization problem of human tracking data association which in our methods minimizes motion and apperance cost in order to generate a tracklet of a human even if occlusion exists.</p>
+			<p style="font-family:OpenSans-Light;font-size:16px;width:90%;display:inline-block;margin-top:20px;">This human tracking algorithm is a Python implementation of the paper "GMCP-Tracker: Global Multi-object Tracking Using Generalized Minimum Clique Graphs". The algorithm attempts to solve the optimization problem of human tracking data association which in our methods minimizes motion and appearance cost in order to generate a tracklet of a human even if occlusion exists.</p>
 		</div>
 
 		<div style="border: 1px solid #B0B0B0;border-radius: 10px;padding-bottom:35px;width:500px;display:inline-block;vertical-align:top;margin-right:525px;margin-top:-310px;height:255px;background-color:white;">
 
 			<p style="font-family:OpenSans-Light;font-size:18px;display:inline-block;margin-top:30px;">Team</p>
 			<div style="background-color:#ADADAD; width:50px; height:1px;"></div>
-			<img id="utface" src="utkarshtandonimgface.jpg" style="width:150px;height:auto;margin-right:40px;border-radius: 50%;display:inline-block;margin-top:-30px;">
+			<img id="utface" src="utkarshtandonimgface.jpg"  style="cursor:pointer;width:150px;height:auto;margin-right:40px;border-radius: 50%;display:inline-block;margin-top:-30px;">
 			<div style="background-color:#B0B0B0;width:1px;height:80px;display:inline-block;margin-right:195px;margin-top:45px;">
-			<img id="zface" src="drzamirface.jpg" style="width:150px;height:auto;margin-left:40px;border-radius: 50%;display:inline-block;margin-top:-30px;">
+			<img id="zface" src="drzamirface.jpg" style="width:150px;cursor:pointer;height:auto;margin-left:40px;border-radius: 50%;display:inline-block;margin-top:-30px;">
 		</div>
 		</center>
 
