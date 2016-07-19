@@ -6,3 +6,5 @@ This human tracking algorithm is a Python implementation of the paper "GMCP-Trac
 2. Run gmcpalgorithm.py
 3. Edit www/index.html to match your IP address for HTTP post
 4. Open www/index.html in browser
+
+Message utkarsh.tandon1@gmail.com if you have any questions.
